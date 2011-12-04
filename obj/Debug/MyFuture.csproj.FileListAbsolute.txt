@@ -1,0 +1,5 @@
+c:\users\n\desktop\MyFuture\MyFuture\obj\Debug\ResolveAssemblyReference.cache
+c:\users\n\desktop\MyFuture\MyFuture\bin\MyFuture.dll
+c:\users\n\desktop\MyFuture\MyFuture\bin\MyFuture.pdb
+c:\users\n\desktop\MyFuture\MyFuture\obj\Debug\MyFuture.dll
+c:\users\n\desktop\MyFuture\MyFuture\obj\Debug\MyFuture.pdb

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="NinaDB" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=seaweed.arvixe.com;Initial Catalog=NinaDB;User ID=degammeur" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="NinaDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="necemon.Experts" Member="Experts">
+    <Type Name="Expert">
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="WorkAddress" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="Company" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="OneOff" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EventDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+      <Column Name="Industry" Type="System.String" DbType="VarChar(64)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="necemon.Presentations" Member="Presentations">
+    <Type Name="Presentation">
+      <Column Name="EventID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EventExpertID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Date" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Time" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Confirmed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Topic" Type="System.String" DbType="VarChar(512)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

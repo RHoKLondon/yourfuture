@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="MyFuture.Site" %>
+<%@ Register Src="~/LogInLinks.ascx" TagName="LogInLinks" TagPrefix="EL" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+     <link rel="stylesheet" type="text/css" href="fonts.css" media="screen" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script src="slides.min.jquery.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#slides').slides({
+                preload: true,
+                preloadImage: 'img/loading.gif',
+                play: 5000,
+                pause: 2500,
+                hoverPause: true,
+                animationStart: function (current) {
+                    $('.caption').animate({
+                        bottom: -35
+                    }, 100);
+                    if (window.console && console.log) {
+                        // example return of current slide number
+                        console.log('animationStart on slide: ', current);
+                    };
+                },
+                animationComplete: function (current) {
+                    $('.caption').animate({
+                        bottom: 0
+                    }, 200);
+                    if (window.console && console.log) {
+                        // example return of current slide number
+                        console.log('animationComplete on slide: ', current);
+                    };
+                },
+                slidesLoaded: function () {
+                    $('.caption').animate({
+                        bottom: 0
+                    }, 200);
+                }
+            });
+        });
+</script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="background-image:url('bar.png');">
+    <div class="wrap">
+    <div style="float:right"><EL:LogInLinks ID="LogInLinks1" runat="server" Visible="True" /></div>
+    <div style="clear: both;"> </div>
+    </div>
+    </div>
+
+    <div class="wrap">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+
+    <br /><br /><br />
+<div style="background-image:url('footer.png'); height:95px">
+<div class="wrap">
+<center>
+<br /><br />
+<a href="#">About us</a> &nbsp;&nbsp;
+<a href="#">Parents information</a> &nbsp;&nbsp;
+<a href="#">Terms and conditions</a> &nbsp;&nbsp;
+<a href="#">Privacy policy</a> &nbsp;&nbsp;
+<a href="#">Contact us</a> &nbsp;&nbsp;
+<div style="clear: both;"> </div>
+</center>
+</div>
+</div>
+    </form>
+</body>
+</html>
